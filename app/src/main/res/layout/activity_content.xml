@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ContentActivity">
+
+    <android.widget.Toolbar
+        android:id="@+id/content_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:theme="@style/Toolbar"
+        android:elevation="10dp"
+        android:title="TestChat"
+        android:navigationIcon="@drawable/ic_baseline_arrow_back_24">
+    </android.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        tools:listitem="@layout/content_recyclerview_item"/>
+
+</LinearLayout>
