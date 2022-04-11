@@ -11,20 +11,21 @@ class ContentActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         val arguments = intent.extras
         val name = arguments!!["name"].toString()
-        AppSingleton.icon = arguments["icon"] as Int?
+        val icon = arguments["icon"]
+        AppSingleton.icon = icon as Int?
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_content)
 
         val toolbar = findViewById<Toolbar>(R.id.content_toolbar)
+        toolbar.setLogo(icon as Int)
         toolbar.title = name
+
         toolbar.setNavigationOnClickListener {
             onBackPressed()
         }
 
-        //initRecycler()
         initRecyclerView()
-        //initRecyclerViewSelf()
     }
 
     private fun initRecyclerView() {
@@ -34,18 +35,6 @@ class ContentActivity : AppCompatActivity() {
     }
 
     private fun fillList(): List<String> {
-        val data = mutableListOf<String>()
-        (0..30).forEach { i -> data.add("$i element") }
-        return data
-    }
-
-    private fun initRecyclerViewSelf() {
-        val recyclerViewContent: RecyclerView = findViewById(R.id.recyclerViewContent)
-        recyclerViewContent.layoutManager = LinearLayoutManager(this)
-        recyclerViewContent.adapter = ContentSelfRecyclerAdapter(fillListSelf())
-    }
-
-    private fun fillListSelf(): List<String> {
         val data = mutableListOf<String>()
         (0..30).forEach { i -> data.add("$i element") }
         return data

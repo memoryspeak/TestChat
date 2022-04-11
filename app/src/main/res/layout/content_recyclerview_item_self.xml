@@ -5,8 +5,8 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:id="@+id/content_item_self"
-    android:layout_marginTop="5dp"
-    android:layout_marginBottom="5dp">
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="8dp">
 
     <LinearLayout
         android:id="@+id/content_shape_self"

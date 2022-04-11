@@ -8,7 +8,6 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import kotlin.reflect.typeOf
 
 class ChatRecyclerAdapter(private val users: List<User>) :
     RecyclerView.Adapter<ChatRecyclerAdapter.ChatViewHolder>() {
@@ -31,7 +30,6 @@ class ChatRecyclerAdapter(private val users: List<User>) :
         val icon = user.icon
         val name = user.name
         val theme = user.theme
-        //val messages = user.messages.toTypedArray()
 
         holder.chatIcon.setImageResource(icon)
         holder.largeTextView.text = name

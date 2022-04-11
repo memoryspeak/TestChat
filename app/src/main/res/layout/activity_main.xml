@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/Toolbar"
-        android:elevation="10dp"
+        android:elevation="20dp"
         android:title="TestChat"
         android:navigationIcon="@drawable/ic_baseline_menu_24">
     </android.widget.Toolbar>
@@ -19,9 +20,5 @@
         android:id="@+id/recyclerViewChat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         tools:listitem="@layout/chat_recyclerview_item"/>
 </LinearLayout>
